@@ -6,3 +6,7 @@
     border: 6px solid blue;
 }
 
+.fader {
+    background-color: black;
+    transition: background-color 15s ease;
+}

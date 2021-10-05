@@ -20,14 +20,23 @@ container.appendChild(content);
 
 let divs = document.querySelectorAll('.content');
 
+
+/* Goes throuh each div and adds and event listener for a mouse hover,
+when a mouse hover is heard background turns red. on mouse out the class is
+turned to "fader" whose CSS rules can be found in styles sheet. */
+
 divs.forEach((content)  => { 
 
 content.addEventListener ('mouseover', () => {
     content.style.backgroundColor = "red";
+    content.classList.remove('fader');
+    content.classList.add('content');
     });
 
 content.addEventListener ('mouseout', () => {
     content.style.backgroundColor = "white";
+    content.classList.remove('content');
+    content.classList.add('fader');
     });    
     
 });
